@@ -2,13 +2,11 @@ const app = require('express')()
 const consign = require('consign')
 const db = require('./config/db')
 const mongoose = require('mongoose')
-const env = require('./.env')
 
 require('./config/mongodb')
 
 app.db = db
 app.mongoose = mongoose
-app.env = env
 
 consign()
   .include('./config/passport.js')
@@ -19,6 +17,6 @@ consign()
   .then('./config/routes.js')
   .into(app)
 
-app.listen(env.PORT || 3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log('Backend executando...')
 })
