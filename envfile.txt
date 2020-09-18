@@ -1,3 +1,4 @@
+// Sera necessario um arquivo .env com as seguintes configurações...
 module.exports = {
     authSecret: '',
     db: {
@@ -5,7 +6,7 @@ module.exports = {
         port: 5432,
         database: 'work_record',
         user: 'postgres',
-        password: '3301'
+        password: 'yourpassword'
     },
     mongodb: 'mongodb://localhost/work_record_stats'
 }
