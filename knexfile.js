@@ -2,7 +2,7 @@
 module.exports = {
 
   client: 'postgresql',
-  connection: process.env.DATABASE_URL,
+  connection: '',
   pool: {
     min: 2,
     max: 10
