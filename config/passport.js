@@ -1,4 +1,5 @@
 // const { authSecret } = require('../.env')
+const authSecret = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9'
 const passport = require('passport')
 const passportJwt = require('passport-jwt')
 const { Strategy, ExtractJwt } = passportJwt
