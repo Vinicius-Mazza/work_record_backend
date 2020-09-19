@@ -7,18 +7,18 @@ module.exports = app => {
 
   app.route('/users')
     .all(app.config.passport.authenticate())
-    .post(admin(app.api.user.save))
-    .get(admin(app.api.user.get))
+    .post(app.api.user.save)
+    .get(app.api.user.get)
 
   app.route('/users/:id')
     .all(app.config.passport.authenticate())
-    .put(admin(app.api.user.save))
-    .delete(admin(app.api.user.remove))
+    .put(app.api.user.save)
+    .delete(app.api.user.remove)
 
   app.route('/categories')
     .all(app.config.passport.authenticate())
     .get(admin(app.api.category.get))
-    .post(admin(app.api.category.save))
+    .post(app.api.category.save)
 
     // Tomar cuidado com a ordem! Tem que vir antes de /categories/:id
   app.route('/categories/tree')
@@ -28,19 +28,19 @@ module.exports = app => {
   app.route('/categories/:id')
     .all(app.config.passport.authenticate())
     .get(app.api.category.getById)
-    .put(admin(app.api.category.save))
-    .delete(admin(app.api.category.remove))
+    .put(app.api.category.save)
+    .delete(app.api.category.remove)
   
   app.route('/clients')
     .all(app.config.passport.authenticate())
-    .get(admin(app.api.client.get))
-    .post(admin(app.api.client.save))
+    .get(app.api.client.get)
+    .post(app.api.client.save)
 
   app.route('/clients/:id')
     .all(app.config.passport.authenticate())
     .get(app.api.client.getById)
-    .put(admin(app.api.client.save))
-    .delete(admin(app.api.client.remove))
+    .put(app.api.client.save)
+    .delete(app.api.client.remove)
 
   app.route('/categories/:id/clients')
     .all(app.config.passport.authenticate())
