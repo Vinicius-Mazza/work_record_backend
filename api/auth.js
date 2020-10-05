@@ -1,5 +1,5 @@
 const { secretKey } = require('../.env')
-const authSecret = authSecret ? process.env.authSecret : secretKey
+const authSecret = process.env.authSecret ? process.env.authSecret : secretKey
 const jwt = require('jwt-simple')
 const bcrypt = require('bcryptjs')
 
