@@ -1,5 +1,5 @@
-const { db } = require('./.env')
-const connect = process.env.DATABASE_URL ? process.env.DATABASE_URL : db
+// const { db } = require('./.env')
+const connect = process.env.DATABASE_URL
 
 module.exports = {
 
