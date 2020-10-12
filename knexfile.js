@@ -1,4 +1,5 @@
 // const { db } = require('./.env')
+// const connect = db
 const connect = process.env.DATABASE_URL
 
 module.exports = {

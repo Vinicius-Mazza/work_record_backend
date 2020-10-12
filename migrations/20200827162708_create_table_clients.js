@@ -8,7 +8,8 @@ exports.up = function(knex, Promise) {
       table.string('arrivalDate').notNull()
       table.string('stage').notNull()
       table.string('stageStatus').notNull()
-      table.string('departureDate').notNull()
+      
+      table.string('departureDate') //Atenção
 
       // Em observação
       table.string('price')
