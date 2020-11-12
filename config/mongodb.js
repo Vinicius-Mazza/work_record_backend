@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
-// const { mongoDB } = require('../.env')
 const url = process.env.mongodb
+// const { mongoDB } = require('../.env')
+// const url = mongoDB
 
 mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
   .catch(e => {
