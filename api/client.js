@@ -14,7 +14,7 @@ module.exports = app => {
       existsOrError(client.arrivalDate, 'Data de chegada não informado')
       existsOrError(client.stage, 'Etapa do trabalho não informado')
       existsOrError(client.stageStatus, 'Status da etapa não informado')
-      // existsOrError(client.departureDate, 'Data de saida não informado')
+      existsOrError(client.departureDate, 'Data de saida não informado')
     }catch(msg) {
       res.status(400).send(msg)
     }
